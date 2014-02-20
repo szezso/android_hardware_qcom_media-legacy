@@ -48,6 +48,10 @@ endif
 
 libOmxVdec-def += -D_ANDROID_ICS_
 
+ifeq ($(TARGET_USES_ION),true)
+libOmxVdec-def += -DUSE_ION
+endif
+
 # ---------------------------------------------------------------------------------
 # 			Make the Shared library (libOmxVdec)
 # ---------------------------------------------------------------------------------
