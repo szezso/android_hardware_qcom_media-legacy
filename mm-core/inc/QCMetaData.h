@@ -65,6 +65,13 @@ enum {
     kKeyUseArbitraryMode     = 'ArbM',  //bool (int32_t)
     kKeySmoothStreaming      = 'ESmS',  //bool (int32_t)
     kKeyHFR                  = 'hfr ',  // int32_t
+
+    kKeySampleBits        = 'sbit', // int32_t (audio sample bit-width)
+    kKeyMinBlkSize        = 'mibs', //int32_t
+    kKeyMaxBlkSize        = 'mabs', //int32_t
+    kKeyMinFrmSize        = 'mifs', //int32_t
+    kKeyMaxFrmSize        = 'mafs', //int32_t
+    kKeyMd5Sum            = 'md5s', //cstring
 };
 
 #if 0
@@ -81,6 +88,11 @@ enum {
 };
 #endif
 
+//This enum should be keep in sync with "enum Flags" in MediaExtractor.h in AOSP,
+//Value should reflect as last entry in the enum
+enum {
+    CAN_SEEK_TO_ZERO   = 16, // the "previous button"
+};
 }  // namespace android
 
 #endif  // QC_META_DATA_H_
