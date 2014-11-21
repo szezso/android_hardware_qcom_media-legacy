@@ -61,14 +61,14 @@ LOCAL_PATH:= $(ROOT_DIR)
 
 libmm-vdec-inc          := bionic/libc/include
 libmm-vdec-inc          += bionic/libstdc++/include
-libmm-vdec-inc          += $(LOCAL_PATH)/inc 
+libmm-vdec-inc          += $(LOCAL_PATH)/inc
 libmm-vdec-inc          += $(OMX_VIDEO_PATH)/vidc/common/inc
-libmm-vdec-inc          += $(call project-path-for,qcom-media)/$(TARGET_BOARD_PLATFORM)/mm-core/inc
+libmm-vdec-inc          += $(call project-path-for,qcom-media)/mm-core/inc
 #libmm-vdec-inc          += bionic/libc/kernel/common/linux
 #DRM include - Interface which loads the DRM library
 libmm-vdec-inc	        += $(OMX_VIDEO_PATH)/DivxDrmDecrypt/inc
-libmm-vdec-inc          += $(call project-path-for,qcom-display)/$(TARGET_BOARD_PLATFORM)/libgralloc
-libmm-vdec-inc          += $(call project-path-for,qcom-display)/$(TARGET_BOARD_PLATFORM)/libgenlock
+libmm-vdec-inc          += $(call project-path-for,qcom-display)/libgralloc
+libmm-vdec-inc          += $(call project-path-for,qcom-display)/libgenlock
 libmm-vdec-inc          += frameworks/native/include/media/openmax
 libmm-vdec-inc          += frameworks/native/include/media/hardware
 
@@ -100,7 +100,7 @@ include $(BUILD_SHARED_LIBRARY)
 # ---------------------------------------------------------------------------------
 include $(CLEAR_VARS)
 
-mm-vdec-test-inc    := $(call project-path-for,qcom-media)/$(TARGET_BOARD_PLATFORM)/mm-core/inc
+mm-vdec-test-inc    := $(call project-path-for,qcom-media)/mm-core/inc
 mm-vdec-test-inc    += $(LOCAL_PATH)/inc
 #mm-vdec-test-inc    += bionic/libc/kernel/common/linux
 
@@ -122,7 +122,7 @@ include $(BUILD_EXECUTABLE)
 # ---------------------------------------------------------------------------------
 include $(CLEAR_VARS)
 
-mm-vdec-drv-test-inc    := $(call project-path-for,qcom-media)/$(TARGET_BOARD_PLATFORM)/mm-core/inc
+mm-vdec-drv-test-inc    := $(call project-path-for,qcom-media)/mm-core/inc
 mm-vdec-drv-test-inc    += $(LOCAL_PATH)/inc
 #mm-vdec-drv-test-inc    += bionic/libc/kernel/common/linux
 
